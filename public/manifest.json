@@ -3,7 +3,7 @@
   "name": "QTify APP",
   "icons": [
     {
-      "src": "%PUBLIC_URL%/Assets/QTifylogo.png",
+      "src": "./QTifylogo.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     }

@@ -20,4 +20,6 @@ html,body {
 
 body {
     font-family: Poppins, sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
 }

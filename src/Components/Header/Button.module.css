@@ -1,0 +1,14 @@
+.button{
+    background-color: var(--color-black);
+    color: var(--color-primary);
+    border-radius: 12px;
+    padding: 13px 16px;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 800px) {
+    .button{
+        padding: 11px 13px;
+    }
+}
