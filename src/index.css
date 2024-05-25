@@ -1,0 +1,23 @@
+:root {
+    --color-primary: #34C94B;
+    --color-black:#121212;
+    --color-white: #ffffff;
+}
+
+*,
+*::before,
+*::after   {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
