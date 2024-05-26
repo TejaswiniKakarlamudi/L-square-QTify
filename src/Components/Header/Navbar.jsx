@@ -8,7 +8,7 @@ function Navbar(){
     return (
         <nav className={styles.navbar}> 
             <Logo/>
-            <Search placeholder={"search"}/>
+            <Search/>
             <Button>Give Feedback</Button>
         </nav>
     )
