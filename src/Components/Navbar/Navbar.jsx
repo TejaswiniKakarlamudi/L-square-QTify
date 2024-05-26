@@ -10,10 +10,10 @@ function Navbar(){
             <a href="/">
             <Logo/>
             </a>
-            <Search/>
+            <Search placeholder={'search'}/>
             <Button>Give Feedback</Button>
         </nav>
     )
 }
-// placeholder={'search'}
+
 export default Navbar;
