@@ -10,7 +10,7 @@ function Navbar(){
             <a href="/">
             <Logo/>
             </a>
-            <Search placeholder={'search'}/>
+            <Search placeholder={'search a song'}/>
             <Button>Give Feedback</Button>
         </nav>
     )
