@@ -1,24 +1,27 @@
 import React from "react";
 import headphones from "../../Assets/vibrating-headphone 1.svg";
 import styles from './Hero.module.css';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 
 function Hero() {
     return (
-        <Box className={styles.hero}>
-            <Grid container className={styles.heroBox} spacing={2} alignItems={"center"} justifyContent={"center"}>
-                <Grid item xs={8} className={styles.textBox}>
+        <Box sx={{
+            marginTop: '10px',
+            marginX: '10vw',
+        }}>
+            <Grid container spacing={5} alignItems="center" justifyContent="center" className={styles.heroBox}>
+                <Grid item style={{ width: '60%',}} className={styles.textBox}>
                     <div>
-                        <Typography className={styles.heroText} variant="p">
+                        <h1 className={styles.heroText}>
                             100 Thousand Songs, ad-free
                             <br />
                             Over thousands podcast episodes
-                        </Typography>
+                        </h1>
                     </div>
                 </Grid>
-                <Grid item xs={4} className={styles.heroImage}>
-                    <div>
-                        <img src={headphones} alt="Vibrating Headphones" />
+                <Grid item style={{ width: '40%',}} >
+                    <div className={styles.heroImage}>
+                        <img src={headphones} alt="Vibrating Headphones" sx={{ width: '200px', height: '200px', marginY:'2px',}} />
                     </div>
                 </Grid>
             </Grid>

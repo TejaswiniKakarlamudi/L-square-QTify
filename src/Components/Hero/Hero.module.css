@@ -1,33 +1,43 @@
- .hero{
-    height: 270px;
-    width: 100%;
-    top: 74px;
-    color: var(--color-white);
+/* Hero section container */
+.hero {
+   position: relative;
+   height: 270px; /* Adjust height as needed */
+   width: 100%;
+   top: 74px; /* Adjust top spacing */
+   color: var(--color-white); /* Adjust text color */
  }
-
+ 
+ /* Grid container for text and image */
+ .heroBox {
+   width: 100%;
+   height: 212px; /* Adjust height as needed */
+ }
+ 
+ /* Styling for the text */
  .heroText {
-    width: 500px;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 48px;
-    text-align: center;
-    color: var(--color-white);
-
+   text-align: center;
+   color: var(--color-white);
+   font-weight: 600;
+   font-size: 32px;
+   line-height: 48px;
+   margin-bottom: 20px; /* Add margin to create space between text and image */
  }
-
- .textBox{
-    height: 100px;
- }
-
- .heroImage{
-    width: 100%;
-    height: 212px;
-    
- }
-
- .heroBox{
-   width: 799px;
+ 
+ /* Styling for the image */
+ .heroImage {
+   width: 212px;
    height: 212px;
-   top: 103px;
-   left: 327px;
+   margin-left: auto; /* Adjust alignment of image */
+   margin-right: auto; /* Adjust alignment of image */
+   display: block; /* Ensures the image is centered horizontally */
  }
+ 
+ /* Media query for smaller screens */
+ @media (max-width: 768px) {
+   .heroText {
+     font-size: 1.5em;
+     font-weight: 500;
+     line-height: 36px;
+   }
+ }
+ 
