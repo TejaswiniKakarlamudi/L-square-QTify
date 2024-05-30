@@ -1,43 +1,75 @@
-/* Hero section container */
 .hero {
-   position: relative;
-   height: 270px; /* Adjust height as needed */
-   width: 100%;
-   top: 74px; /* Adjust top spacing */
-   color: var(--color-white); /* Adjust text color */
- }
- 
- /* Grid container for text and image */
- .heroBox {
-   width: 100%;
-   height: 212px; /* Adjust height as needed */
- }
- 
- /* Styling for the text */
- .heroText {
-   text-align: center;
-   color: var(--color-white);
-   font-weight: 600;
-   font-size: 32px;
-   line-height: 48px;
-   margin-bottom: 20px; /* Add margin to create space between text and image */
- }
- 
- /* Styling for the image */
- .heroImage {
-   width: 212px;
-   height: 212px;
-   margin-left: auto; /* Adjust alignment of image */
-   margin-right: auto; /* Adjust alignment of image */
-   display: block; /* Ensures the image is centered horizontally */
- }
- 
- /* Media query for smaller screens */
- @media (max-width: 768px) {
-   .heroText {
-     font-size: 1.5em;
-     font-weight: 500;
-     line-height: 36px;
-   }
- }
- 
+  position: relative;
+  height: 270px;
+  width: 100%;
+  top: 74px;
+  color: var(--color-white);
+}
+
+.heroBox {
+  width: 100%;
+  height: 212px;
+  display: flex; /* Center contents horizontally and vertically */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.heroText {
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.heroImage {
+  width: 212px;
+  height: 212px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-width: 468px) {
+  .heroText {
+    font-size: 0.7em;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .heroImage{
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 586px) {
+  .heroText {
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .heroImage{
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 586px) and (max-width: 800px) {
+  .heroText {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .heroImage{
+    width: 180px;
+    height: 180px;
+  }
+}
