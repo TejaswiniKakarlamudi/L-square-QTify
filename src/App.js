@@ -7,7 +7,7 @@ import img from './Assets/vibrating-headphone 1.svg';
 function App() {
   const data = {
     songs: ['ureka', 'sakai', 'mikai', ],
-    img: img,
+    image: 'https://i.ytimg.com/vi/puHlyuVXLSc/maxresdefault.jpg',
     follows: 21,
     title:'Welcome'
 
