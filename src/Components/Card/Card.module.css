@@ -9,7 +9,6 @@
   justify-content: space-between;
   border-radius: 10px;
   overflow: hidden;
-  flex-wrap: nowrap;
   margin: 10px;
 }
 
@@ -17,10 +16,8 @@
   width: 159px;
   height: 205px;
   position: relative;
-  background-color: var(--color-black) !important;
   border-radius: 10px !important;
   overflow: hidden;
-  
 }
 
 .cardImage {
@@ -31,31 +28,33 @@
 }
 
 .cardChip {
-  margin-top: -30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
   color: var(--color-black);
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
-  /* border: 2px solid red; Temporary for debugging */
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .chip {
-  width: auto;
-  height: 22px;
-  text-align: left;
   background-color: var(--color-black);
   color: var(--color-white);
-  border-radius: 1px;
-  margin: 2px 2px;
+  border-radius: 2px;
+  height: 22px;
+  margin: 2px;
 }
 
 .cardText {
   padding: 4px !important;
 }
 
-a{
+a {
   text-decoration: none;
 }
