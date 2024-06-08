@@ -1,0 +1,57 @@
+.section {
+    margin-bottom: 20px;
+    border: 1px ;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--color-black);
+    margin-bottom: 5px;
+}
+
+.toggleText {
+    cursor: pointer;
+    color: var(--color-primary);
+    background-color: var(--color-black);
+    border: none;
+    font-size: small;
+}
+
+.cardWrapper {
+    margin: 5px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+}
+
+.loading .MuiCircularProgress-root {
+    color: var(--color-primary);
+}
+
+
+/* Example CSS for Swiper navigation buttons */
+.mySwiper {
+    /* Custom styles for the Swiper container */
+}
+
+.swiper-button-prev, .swiper-button-next {
+    /* Customize button styles */
+    color: white; /* Change button text color */
+    background-color: black; /* Change button background color */
+    border-radius: 5px; /* Optional: Rounded corners */
+    padding: 10px; /* Optional: Adjust padding */
+    margin: 10px; /* Optional: Adjust margin */
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    /* Optional: Hover styles */
+    opacity: 0.8;
+}

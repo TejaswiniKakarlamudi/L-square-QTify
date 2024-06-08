@@ -1,25 +1,51 @@
-
-import './App.css';
-import Hero from './Components/Hero/Hero';
-import Navbar from './Components/Navbar/Navbar';
-import Cards from './Components/Card/Card';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Pages/HomePage.jsx';
 
 function App() {
-  const data = {
-    songs: ['ureka', 'sakai', 'mikai', ],
-    image: 'https://i.ytimg.com/vi/puHlyuVXLSc/maxresdefault.jpg',
-    follows: 21,
-    title:'Welcome'
-
-  }
   return (
-    <div className="App">
-      <Navbar/>
-      <Hero/>
-      <Cards type = 'album' data={data}/>
-    </div>
-
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
 export default App;
+
+
+
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Home from './Pages/HomePage.jsx';
+// import Layout from './Layout';
+
+// function App() {
+//   return (
+//     <Router>
+//       <Layout>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           {/* Add more routes here as needed */}
+//         </Routes>
+//       </Layout>
+//     </Router>
+//   );
+// }
+
+// export default App;
+// Layout.jsx
+// import React from 'react';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+
+// const Layout = ({ children }) => {
+//   return (
+//     <div>
+//       <Header />
+//       <main>{children}</main>
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Layout;

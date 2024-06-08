@@ -1,0 +1,10 @@
+.loadingIndicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .sectionsContainer {
+    width: 100%;
+    max-width: 1200px;
+  }

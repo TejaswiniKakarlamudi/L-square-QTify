@@ -4,10 +4,15 @@ import styles from './Card.module.css';
 
 function Cards({ type, data }) {
 
+    console.log('type card', type);
+    console.log('data card', data);
   const getCard = (type,data)=>{
     switch(type){
       case 'album':{
         const {slug, songs, image,follows,title} = data;
+        console.log('title card', title);
+        console.log('type card' , type);
+        console.log('data card', data);
         return (
           <Card className={styles.card} sx={{ bgcolor: 'var(--color-black)'}}>
           <Tooltip title={`${songs.length} songs`} placement="top" arrow >
@@ -60,7 +65,15 @@ function Cards({ type, data }) {
         </a>
         )
       }
-      default: return <></>;
+      default:return (
+        <Card className={styles.card} sx={{ bgcolor: 'var(--color-black)' }}>
+            <CardContent className={styles.cardText} sx={{ width: '159px', height: '30px', bgcolor: 'var(--color-black)', color: 'var(--color-white)', textAlign: 'left' }}>
+                <Typography gutterBottom variant="p" component="div">
+                    Default Content
+                </Typography>
+            </CardContent>
+        </Card>
+    );
 
       }      
 
