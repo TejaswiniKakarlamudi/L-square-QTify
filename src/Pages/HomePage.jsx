@@ -9,27 +9,31 @@ import Styles from './HomePage.module.css';
 function HomePage() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
+  const [request, setRequest] = useState(true);
 
-  const generateData = async () => {
+  const generateData = async (key, source) => {
     try {
-      const topAlbumsData = await fetchTopAlbums();
-      const newAlbumsData = await fetchNewAlbums();
-      const songsData = await FetchSongs();
+      const sourceData = await source();
+      // const newAlbumsData = await fetchNewAlbums();
+      // const songsData = await FetchSongs();
 
-      setData({
-        topAlbums: topAlbumsData,
-        newAlbums: newAlbumsData,
-        songs: songsData,
-      });
+      setData(prevData => ({
+        ...prevData,
+        [key]: sourceData,
+      }));
+  
     } catch (error) {
       console.error('Error fetching data:', error);
+      setRequest(false);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    generateData();
+    generateData('topAlbums',fetchTopAlbums);
+    generateData('songs',FetchSongs);
+    generateData('newAlbums',fetchNewAlbums);
   }, []);
 
   return (
@@ -37,14 +41,24 @@ function HomePage() {
       <Navbar />
       <Hero />
       {loading ? (
-        <CircularProgress className={Styles.loadingIndicator}/>
-      ) : (
+        <CircularProgress className={Styles.loadingIndicator}  style={{ color: 'var(--color-primary)' }}/>
+      ) :!loading && !request ? (
+          <div className={Styles.none}>
+            No Songs Found, try later....
+          </div>
+        
+      ):(
         <>
-          <Section title="Top Albums" data={data.topAlbums} type= 'album' />
-          <Section title="New Albums" data={data.newAlbums} type="album" />
-          {/* Uncomment the line below once you have a Section component for songs */}
-          {/* <Section title="Songs" data={data.songs} type="songs" /> */}
-        </>
+    {data.topAlbums && (
+      <Section title="Top Albums" data={data.topAlbums} type="album" />
+    )}
+    {data.newAlbums && (
+      <Section title="New Albums" data={data.newAlbums} type="album" />
+    )}
+    {data.songs && (
+      <Section title="Songs" data={data.songs} type="songs" />
+    )}
+  </>
       )}
     </div>
   );

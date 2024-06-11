@@ -9,6 +9,7 @@ export const fetchTopAlbums = async () => {
         return data;
     } catch (error) {
         console.error(error);
+        throw new Error('Failed to fetch top albums');
     }
 }
 
@@ -19,6 +20,7 @@ export const fetchNewAlbums = async () => {
         return data;
     } catch (error) {
         console.error(error);
+        throw new Error('Failed to fetch new albums');
     }
 }
 
@@ -29,6 +31,7 @@ export const AlbumSlug = async () => {
         return data;
     } catch (error) {
         console.error(error);
+        throw new Error('Failed to fetch album link');
     }
 }
 
@@ -39,6 +42,7 @@ export const FetchSongs = async () => {
         return data;
     } catch (error) {
         console.error(error);
+        throw new Error('Failed to fetch songs');
     }
 }
 
@@ -49,6 +53,7 @@ export const FetchFAQ = async () => {
         return data;
     } catch (error) {
         console.error(error);
+        throw new Error('Failed to fetch FAQs');
     }
 }
 
@@ -59,5 +64,6 @@ export const FetchGenres = async () => {
         return data;
     } catch (error) {
         console.error(error);
+        throw new Error('Failed to fetch genre songs');
     }
 }

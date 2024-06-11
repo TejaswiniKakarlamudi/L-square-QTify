@@ -3,16 +3,10 @@ import { Card, CardMedia, CardContent, Chip, Typography, Tooltip } from '@mui/ma
 import styles from './Card.module.css';
 
 function Cards({ type, data }) {
-
-    console.log('type card', type);
-    console.log('data card', data);
   const getCard = (type,data)=>{
     switch(type){
       case 'album':{
         const {slug, songs, image,follows,title} = data;
-        console.log('title card', title);
-        console.log('type card' , type);
-        console.log('data card', data);
         return (
           <Card className={styles.card} sx={{ bgcolor: 'var(--color-black)'}}>
           <Tooltip title={`${songs.length} songs`} placement="top" arrow >
