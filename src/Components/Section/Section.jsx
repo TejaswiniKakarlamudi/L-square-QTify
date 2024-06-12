@@ -101,7 +101,7 @@ function Section({ title, type, data }) {
                              </div>  
                         ) : (
                             <Swiper 
-                                spaceBetween={40}
+                                spaceBetween={1}
                                 initialSlide={0}
                                 modules={[Navigation]} 
                                 slidesPerView={'6'}
@@ -109,10 +109,49 @@ function Section({ title, type, data }) {
                                 allowTouchMove
                                 loop={true}
                                 className="mySwiper"
-                                style={{ padding: '0px 20px' }}
+                                style={{ padding: '0px 20px', 
+                                color: 'white', 
+                                '--swiper-navigation-color': 'var(--color-white)',
+                                '--swiper-navigation-size': '20px',
+                                '--swiper-navigation-background': 'green',}}
+                       
+                                breakpoints={{
+                                    '@0.00': {
+                                        slidesPerView: 1,
+                                        spaceBetween: 4,
+                                    },
+                                    '@0.55': {
+                                        slidesPerView: 2,
+                                        spaceBetween: 4,
+                                    },
+                                    '@0.7': {
+                                        slidesPerView: 3,
+                                        spaceBetween: 4,
+                                    },
+                                    '@1.00': {
+                                        slidesPerView: 4,
+                                        spaceBetween: 4,
+                                    },
+                                    '@1.30': {
+                                        slidesPerView: 5,
+                                        spaceBetween: 4,
+                                    },
+                                    '@1.55': {
+                                        slidesPerView: 6,
+                                        spaceBetween: 4,
+                                    },
+                                    '@1.85': {
+                                        slidesPerView: 7,
+                                        spaceBetween: 2,
+                                    },
+                                    }}
+                                
                                 >
+                                {/* <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div> */}
                                 {filteredData.map((slideContent, index) => (
                                     <SwiperSlide key={index}>
+                                    
                                     <Cards type={type} data={slideContent} />
                                     </SwiperSlide>
                                 ))}

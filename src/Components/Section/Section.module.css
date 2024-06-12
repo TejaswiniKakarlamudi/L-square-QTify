@@ -6,7 +6,7 @@
 
 .header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
     background-color: var(--color-black);
@@ -28,7 +28,7 @@
 
 .wrapper{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap:40px;
     
 }
@@ -60,14 +60,25 @@
     
 }
 
-.swiper-button-next, .swiper-button-prev {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-  }
-  
-  .swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 24px;
-  }
+.mySwiper .swiper-button-next, 
+.mySwiper .swiper-button-prev {
+  background-color: var(--color-primary) !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySwiper .swiper-button-next::after, 
+.mySwiper .swiper-button-prev::after {
+  font-size: 24px;
+  color: white !important;
+}
+
+.mySwiper .swiper-button-next:hover, 
+.mySwiper .swiper-button-prev:hover {
+  opacity: 0.8;
+}
+

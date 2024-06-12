@@ -55,7 +55,7 @@ export default ac;
 //           </Grid>
           
 //           {token && (
-//               <Grid item xs={12} sm={12} md={3} bgcolor='#E9F5E1'>
+//               <Grid item xs={12} sm={12} md={3}  bgcolor='#E9F5E1'>
 //                 <Cart 
 //                 products = {data}
 //                 items={items}
