@@ -111,9 +111,9 @@ function Section({ title, type, data }) {
                                 className="mySwiper"
                                 style={{ padding: '0px 20px', 
                                 color: 'white', 
-                                '--swiper-navigation-color': 'var(--color-white)',
-                                '--swiper-navigation-size': '20px',
-                                '--swiper-navigation-background': 'green',}}
+                                '--swiper-navigation-background': 'var(--color-primary) !important',
+                                '--swiper-navigation-color': 'var(--color-white) ',
+                                '--swiper-navigation-size': '15px',}}
                        
                                 breakpoints={{
                                     '@0.00': {
@@ -142,7 +142,7 @@ function Section({ title, type, data }) {
                                     },
                                     '@1.85': {
                                         slidesPerView: 7,
-                                        spaceBetween: 2,
+                                        spaceBetween: 4,
                                     },
                                     }}
                                 
@@ -155,6 +155,11 @@ function Section({ title, type, data }) {
                                     <Cards type={type} data={slideContent} />
                                     </SwiperSlide>
                                 ))}
+                                <div className={styles.swiperbutton}>
+                                <div className={styles.swiperbuttonprev}></div>
+                                <div className={styles.swiperbuttonnext}></div>
+                                </div>
+                               
                                 </Swiper>
                         )}
                     </div>

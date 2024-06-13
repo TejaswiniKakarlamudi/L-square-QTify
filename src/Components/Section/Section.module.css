@@ -60,25 +60,31 @@
     
 }
 
-.mySwiper .swiper-button-next, 
-.mySwiper .swiper-button-prev {
-  background-color: var(--color-primary) !important;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.swiperbutton{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    top: 59px;
+    z-index: 5;
 }
-
-.mySwiper .swiper-button-next::after, 
-.mySwiper .swiper-button-prev::after {
-  font-size: 24px;
-  color: white !important;
+.swiperbuttonnext, .swiperbuttonprev{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 115px;
+    background-color: var(--color-primary) !important;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px; 
+    /* z-index: 10;   */
 }
-
-.mySwiper .swiper-button-next:hover, 
-.mySwiper .swiper-button-prev:hover {
-  opacity: 0.8;
+.swiperbuttonnext{
+    right: 5px ;
 }
-
+.swiperbuttonprev{
+    margin: 0px -14px;
+}
+ .swiper-button {
+ position: relative;
+}
